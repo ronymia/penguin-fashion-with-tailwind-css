@@ -15,11 +15,15 @@
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: {
+            bebas: ['Bebas Neue', 'cursive',]
+          },
           colors: {
-            clifford: '#da373d',
-            hcolor: '#FFFBF0',
-            fclor: '#FABE4C',
-            bcolor: 'linear-gradient(180deg, #A4BC46 0%, #85A019 100%);'
+            darkGray: '#3E3E3E',
+            offYellow: '#FFFBF0',
+            yellow: '#FABE4C',
+            darkBlue: '#363958',
+            lightGray: 'linear-gradient(180deg, #A4BC46 0%, #85A019 100%);'
           }
         }
       }
@@ -32,17 +36,17 @@
                                      Header Sections start  
     --------------------------------------------------------------------->
 
-  <header class="container mx-auto">
+  <header class=" bg-offYellow h-screen">
     <!--------------------------------------------------------
                                mennu bar sections 
         ------------------------------------------------------>
-    <section>
+    <section class="container mx-auto ml-28">
 
       <nav class="flex justify-between">
         <div class="left-nav">
           <img width="290px" height="40px" src="./images/logo.png" alt="" srcset="">
         </div>
-        <div class="right-nav">
+        <div class="right-nav hidden lg:block">
           <ui class="navbar">
             <li>Home</li>
             <li>Products</li>
@@ -56,14 +60,19 @@
     <!----------------------------------------------------------------
                               Header Contain Sections
         ----------------------------------------------------->
-    <section class="header-contain">
-      <div class="grid grid-cols-2 justify-center items-center">
-        <div class="space-y-4">
-          <h1 class="header-tittle text-9xl uppercase">Be the Penguins
-            <br><span>of Winter</span>
-          </h1>
-          <p class="header-text">Lorem Ipsum is simply dummy text of the printing <br>
-            and typesetting industry.</p>
+    <section class=" container mx-auto header-contain">
+      <div class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-20 ml-20 lg:ml-0">
+        <div class=" w-10/12">
+
+          <h1 class="text-9xl uppercase font-bebas text-yellow">Be the Penguins</h1>
+          <h1 class="text-9xl uppercase font-bebas text-darkBlue mt-4">of Winter</h1>
+
+          <p class="text-2xl my-6 leading-8">
+            Lorem Ipsum is simply dummy text of the printing
+            and typesetting industry.
+            Lorem Ipsum is simply dummy text of the printing
+            and typesetting industry.
+          </p>
           <button class="button bg-lime-600 uppercase p-2 font-normal rounded-lg	text-white">
             Buy Now</button>
         </div>
@@ -79,49 +88,59 @@
                            Header section End 
     ------------------------------------------------------->
 
-  <main class="container mx-auto">
+  <main class="container mx-auto mt-36">
     <section>
       <div class="jacket-section mb-3">
-        <h1 class="contain-tittle text-9xl uppercase">W0Man Jacket</h1>
-        <div class="grid grid-cols-3	">
+        <h1 class="text-center lg:text-left text-7xl lg:text-9xl text-9xl uppercase mb-12 font-bebas text-darkBlue">
+          W0Man Jacket</h1>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-16	lg:gap-x-20	justify-center items-center">
+          <!-- 1st -->
           <div class="card">
             <div class="card-img flex justify-center items-center">
-              <img width="80%" src="./images/jacket-1.png" alt="" srcset="">
+              <img width="70%" src="./images/jacket-1.png" alt="" srcset="">
             </div>
             <div class="m-4">
               <h1 class="text-4xl font-medium	">Yellow Coat Jacket </h1>
-              <p class="text-2xl">Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.</p>
+              <p class="text-2xl text-center">
+                Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
             </div>
-            <div class="card-footer flex justify-around items-end text-5xl">
+            <div class="mb-36 flex justify-around items-end text-5xl">
+              <h1 class="text-4xl text-[yellow]">$234</h1>
+              <button class="button">Buy now</button>
+            </div>
+          </div>
+          <!-- 2nd  -->
+          <div class="card">
+            <div class="card-img flex justify-center items-center">
+              <img width="70%" src="./images/jacket-2.png" alt="" srcset="">
+            </div>
+            <div class="m-4">
+              <h1 class="text-4xl font-medium	">Ladies Jacket</h1>
+              <p class="text-2xl text-center">
+                Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
+            </div>
+            <div class=" mb-36 card-footer flex justify-around items-end text-5xl">
               <h1>$234</h1>
               <button class="button">Buy now</button>
             </div>
           </div>
+          <!-- 3rd -->
           <div class="card">
             <div class="card-img flex justify-center items-center">
-              <img width="80%" src="./images/jacket-1.png" alt="" srcset="">
+              <img width="70%" src="./images/jacket-3.png" alt="" srcset="">
             </div>
             <div class="m-4">
-              <h1 class="text-4xl font-medium	">Yellow Coat Jacket </h1>
-              <p class="text-2xl">Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.</p>
+              <h1 class="text-4xl font-medium	">Woman Leather Jacket</h1>
+              <p class="text-2xl text-center">
+                Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
             </div>
-            <div class="card-footer flex justify-around items-end text-5xl">
-              <h1>$234</h1>
-              <button class="button">Buy now</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-img flex justify-center items-center">
-              <img width="80%" src="./images/jacket-1.png" alt="" srcset="">
-            </div>
-            <div class="m-4">
-              <h1 class="text-4xl font-medium	">Yellow Coat Jacket </h1>
-              <p class="text-2xl">Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.</p>
-            </div>
-            <div class="card-footer flex justify-around items-end text-5xl">
+            <div class="mb-36 card-footer flex justify-around items-end text-5xl">
               <h1>$234</h1>
               <button class="button">Buy now</button>
             </div>
@@ -129,48 +148,60 @@
         </div>
       </div>
     </section>
-    <section>
+    <!-- man jacket section  -->
+    <section class="mt-28">
       <div class="jacket-section mb-3">
-        <h1 class="contain-tittle text-9xl uppercase">W0Man Jacket</h1>
-        <div class="grid grid-cols-3	">
+        <h1 class="mt-20 mb-12 text-center lg:text-left text-7xl lg:text-9xl uppercase font-bebas text-darkBlue">
+          Man Jacket
+        </h1>
+        <div class="grid  grid-cols-1 lg:grid-cols-3 gap-y-16	lg:gap-x-20">
+          <!-- 1st  -->
           <div class="card">
             <div class="card-img flex justify-center items-center">
-              <img width="80%" src="./images/jacket-1.png" alt="" srcset="">
+              <img width="70%" src="./images/jacket-4.png" alt="" srcset="">
             </div>
             <div class="m-4">
-              <h1 class="text-4xl font-medium	">Yellow Coat Jacket </h1>
-              <p class="text-2xl">Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.</p>
+              <h1 class="text-4xl font-medium	">Snowboard Jacket Mens</h1>
+              <p class="text-2xl text-center">
+                Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
             </div>
-            <div class="card-footer flex justify-around items-end text-5xl">
+            <div class="mb-36 card-footer flex justify-around items-end text-5xl">
               <h1>$234</h1>
               <button class="button">Buy now</button>
             </div>
           </div>
+          <!-- 2nd  -->
           <div class="card">
             <div class="card-img flex justify-center items-center">
-              <img width="80%" src="./images/jacket-1.png" alt="" srcset="">
+              <img width="70%" src="./images/jacket-5.png" alt="" srcset="">
             </div>
             <div class="m-4">
-              <h1 class="text-4xl font-medium	">Yellow Coat Jacket </h1>
-              <p class="text-2xl">Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.</p>
+              <h1 class="text-4xl font-medium	">Man Leather Jackets</h1>
+              <p class="text-2xl text-center">
+                Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
             </div>
-            <div class="card-footer flex justify-around items-end text-5xl">
+            <div class=" mb-36 card-footer flex justify-around items-end text-5xl">
               <h1>$234</h1>
               <button class="button">Buy now</button>
             </div>
           </div>
+          <!-- 3rd  -->
           <div class="card">
             <div class="card-img flex justify-center items-center">
-              <img width="80%" src="./images/jacket-1.png" alt="" srcset="">
+              <img width="70%" src="./images/jacket-6.png" alt="" srcset="">
             </div>
             <div class="m-4">
-              <h1 class="text-4xl font-medium	">Yellow Coat Jacket </h1>
-              <p class="text-2xl">Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.</p>
+              <h1 class="text-4xl font-medium	">Man Casual Jackets</h1>
+              <p class="text-2xl text-center">
+                Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
+              </p>
             </div>
-            <div class="card-footer flex justify-around items-end text-5xl">
+            <div class="mb-36 card-footer flex justify-around items-end text-5xl">
               <h1>$234</h1>
               <button class="button">Buy now</button>
             </div>
@@ -178,47 +209,58 @@
         </div>
       </div>
     </section>
-    <section class="information">
-      <div class="grid grid-cols-2 justify-center items-center">
-        <div>
+    <!-- Our service  -->
+    <section class="container mx-auto my-36">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 justify-center items-center">
+        <div class="flex flex-col">
+          <!-- 1st box  -->
           <div class="shadow-lg	box-size rounded-md flex justify-center items-center">
             <div class="flex justify-center items-center">
               <img width="40%%" src="./images/house.png" alt="" srcset="">
             </div>
             <div class="">
               <h1 class="text-4xl font-bold	info-text">Find the Perfect Fit</h1>
-              <p>Everybody is different, which is why we
-                offer styles for every body.</p>
+              <p>
+                Everybody is different, which is why we
+                offer styles for every body.
+              </p>
             </div>
           </div>
+          <!-- 2nd box  -->
           <div class="shadow-lg	box-size rounded-md flex justify-center items-center">
             <div class="flex justify-center items-center">
-              <img width="40%%" src="./images/house.png" alt="" srcset="">
+              <img width="40%" src="./images/box.png" alt="" srcset="">
             </div>
-            <div class="">
-              <h1 class="text-4xl font-bold	info-text">Find the Perfect Fit</h1>
-              <p>Everybody is different, which is why we
-                offer styles for every body.</p>
+            <div class="grid grid-cols-1">
+              <h1 class="text-4xl font-bold	info-text">Free Exchanges</h1>
+              <p>
+                One of the many reasons you can shop
+                with peace of mind.
+              </p>
             </div>
           </div>
+          <!-- 3rd box  -->
           <div class="shadow-lg	box-size rounded-md flex justify-center items-center">
             <div class="flex justify-center items-center">
-              <img width="40%%" src="./images/house.png" alt="" srcset="">
+              <img width="40%%" src="./images/question.png" alt="" srcset="">
             </div>
-            <div class="">
-              <h1 class="text-4xl font-bold	info-text">Find the Perfect Fit</h1>
-              <p>Everybody is different, which is why we
-                offer styles for every body.</p>
+            <div class="grid grid-cols-1">
+              <h1 class="text-4xl font-bold	info-text">Contact Our Seller</h1>
+              <p>
+                They are here to help you. That's quite
+                literally what we pay them for.
+              </p>
             </div>
           </div>
         </div>
+        <!-- service img  -->
         <div>
           <img class="object-cover" src="./images/shopping.png" alt="" srcset="">
         </div>
       </div>
     </section>
   </main>
-  <footer class="container mx-auto mt-6">
+  <footer>
 
   </footer>
 </body>
